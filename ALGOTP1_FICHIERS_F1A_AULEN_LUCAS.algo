@@ -1,0 +1,50 @@
+﻿ALGORYTHME : TRAITEMENT_FICHIERS_CONJUGAISON
+
+BUT : 
+ENTREE : 
+SORITE :
+
+
+PROCEDURE aff_fichier () //Cette procedure affiche les contenu des fichiers
+
+	VAR
+		
+
+	DEBUT
+		
+	FINPROCEDURE
+	
+FONCTION groupe_verbe () //cette fonction permet de reconnaître le groupe de chaque verbe
+	
+	VAR
+		len_verbe : ENTIER
+		term_verbe : CHAINE
+
+	DEBUT
+		SI verbe = aller ALORS
+			groupe_verbe <- 3
+		SINON
+			len_verbe <- longueur(verbe)
+			term_verbe <- EXTRAIRE(verbe,len_verbe-1,2)
+			CAS term_verbe PARMI
+				CAS "er" : 	groupe_verbe <- 1
+				CAS "re" : 	groupe_verbe <- 3
+				CAS "ir" : 	DEBUT
+								
+							FIN
+			FINCASPARMI
+		FIN
+	FINPROCEDURE
+	
+PROCEDURE conjug_verbe () //cette procedure conjugue le verbe
+
+	VAR
+		
+
+	DEBUT
+		
+	FINPROCEDURE
+	
+DEBUT
+	
+FIN
